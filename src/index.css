@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --primary: #00C896;
+    --secondary: #334155;
+    --bg: #FFFFFF;
+    --accent: #F1F5F9;
+}
+
+@layer base {
+
+    html,
+    body,
+    #root {
+        height: 100%;
+    }
+
+    body {
+        background-color: var(--bg);
+        color: var(--secondary);
+        font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: Poppins, Inter, system-ui, sans-serif;
+    }
+}
+
+/* Utilities */
+.rounded-2xl {
+    border-radius: 1rem;
+}
+
+.soft-shadow {
+    box-shadow: 0 10px 30px rgba(51, 65, 85, 0.08);
+}
+
+.gradient-hero {
+    background: linear-gradient(180deg, rgba(0, 200, 150, 0.06) 0%, rgba(241, 245, 249, 0.4) 100%);
+}
+
+.mint-ring:hover {
+    box-shadow: 0 6px 30px rgba(0, 200, 150, 0.12);
+}
+
+.card-hover {
+    transition: transform .28s cubic-bezier(.2, .9, .2, 1), box-shadow .28s;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(16, 24, 40, 0.08);
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(16, 24, 40, 0.06);
+}
+
+/* Simple fade-in used for non-js fallback */
+.fade-enter {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 400ms ease;
+}

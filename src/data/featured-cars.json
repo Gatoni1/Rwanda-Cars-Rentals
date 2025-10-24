@@ -1,0 +1,42 @@
+[
+    {
+        "id": 5,
+        "name": "Toyota Land Cruiser V8",
+        "seats": 7,
+        "priceUSD": 250,
+        "priceRWF": 362500,
+        "transmission": "Automatic",
+        "fuel": "Diesel",
+        "image": "/assets/images/Toyota land cruiser V8 7seats.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Toyota RAV4 Hybrid (2022)",
+        "seats": 5,
+        "priceUSD": 80,
+        "priceRWF": 116000,
+        "transmission": "Automatic",
+        "fuel": "Hybrid",
+        "image": "/assets/images/Toyota RAV4 2022 hybrid 5seats.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Toyota Noah Hybrid",
+        "seats": 7,
+        "priceUSD": 100,
+        "priceRWF": 145000,
+        "transmission": "Automatic",
+        "fuel": "Hybrid",
+        "image": "/assets/images/Toyota noal hybrid 7seats min van.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Toyota Prado",
+        "seats": 7,
+        "priceUSD": 100,
+        "priceRWF": 145000,
+        "transmission": "Automatic",
+        "fuel": "Diesel",
+        "image": "/assets/images/Toyota Prado 7seats.jpg"
+    }
+]

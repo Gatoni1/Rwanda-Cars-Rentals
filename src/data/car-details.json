@@ -1,0 +1,275 @@
+{
+    "1": {
+        "features": [
+            "Comfortable seating for 7 passengers",
+            "Ample luggage space",
+            "Power windows and locks",
+            "Air conditioning",
+            "USB charging ports",
+            "Bluetooth connectivity",
+            "Reverse parking camera"
+        ],
+        "specs": {
+            "engine": "2.4L 4-cylinder",
+            "power": "185 hp",
+            "transmission": "6-speed automatic",
+            "fuelType": "Petrol",
+            "fuelEfficiency": "10.5 km/L",
+            "seating": "7 passengers",
+            "luggage": "Large trunk space"
+        },
+        "description": "The Kia Sorento is a versatile SUV perfect for family trips and group travel. With its comfortable interior and reliable performance, it's an excellent choice for both city driving and longer journeys."
+    },
+    "2": {
+        "features": [
+            "Spacious seating for 20 passengers",
+            "Large luggage compartment",
+            "Air conditioning system",
+            "PA system",
+            "Comfortable reclining seats",
+            "Large windows for sightseeing",
+            "Emergency exit"
+        ],
+        "specs": {
+            "engine": "4.0L Diesel",
+            "power": "150 hp",
+            "transmission": "5-speed manual",
+            "fuelType": "Diesel",
+            "fuelEfficiency": "7 km/L",
+            "seating": "20 passengers",
+            "luggage": "Large rear compartment"
+        },
+        "description": "The Toyota Coaster Bus is ideal for group tours and large gatherings. Its spacious interior and reliable performance make it perfect for tour groups, corporate events, and airport transfers."
+    },
+    "3": {
+        "features": [
+            "Compact and fuel-efficient",
+            "Easy to park",
+            "Air conditioning",
+            "USB charging",
+            "Bluetooth connectivity",
+            "Backup camera",
+            "Fold-down rear seats"
+        ],
+        "specs": {
+            "engine": "1.5L 4-cylinder",
+            "power": "106 hp",
+            "transmission": "CVT automatic",
+            "fuelType": "Petrol",
+            "fuelEfficiency": "15 km/L",
+            "seating": "5 passengers",
+            "luggage": "Medium trunk space"
+        },
+        "description": "The Toyota Hatchback is perfect for city driving and short trips. Its compact size and excellent fuel economy make it an economical choice for urban exploration."
+    },
+    "4": {
+        "features": [
+            "Comfortable seating for 12",
+            "Sliding doors",
+            "Air conditioning",
+            "Spacious interior",
+            "Multiple storage areas",
+            "Easy entry/exit",
+            "Overhead storage"
+        ],
+        "specs": {
+            "engine": "3.0L Diesel",
+            "power": "134 hp",
+            "transmission": "5-speed manual",
+            "fuelType": "Diesel",
+            "fuelEfficiency": "8.5 km/L",
+            "seating": "12 passengers",
+            "luggage": "Large cargo area"
+        },
+        "description": "The Toyota Hiace is a versatile passenger van perfect for group transportation. Its reliable performance and spacious interior make it ideal for airport transfers and group tours."
+    },
+    "5": {
+        "features": [
+            "Luxurious leather seating",
+            "Advanced safety features",
+            "Premium sound system",
+            "Multi-zone climate control",
+            "Sunroof",
+            "Power adjustable seats",
+            "Advanced navigation system"
+        ],
+        "specs": {
+            "engine": "4.6L V8",
+            "power": "318 hp",
+            "transmission": "8-speed automatic",
+            "fuelType": "Diesel",
+            "fuelEfficiency": "8 km/L",
+            "seating": "7 passengers",
+            "luggage": "Large cargo space"
+        },
+        "description": "The Toyota Land Cruiser V8 offers unmatched luxury and capability. Perfect for VIP transportation and luxury safaris, it combines comfort with outstanding off-road performance."
+    },
+    "6": {
+        "features": [
+            "Hybrid powertrain",
+            "Automatic climate control",
+            "Power sliding doors",
+            "Smart entry system",
+            "Multiple USB ports",
+            "Safety sensing package",
+            "Rear entertainment system"
+        ],
+        "specs": {
+            "engine": "2.0L Hybrid",
+            "power": "150 hp combined",
+            "transmission": "CVT automatic",
+            "fuelType": "Hybrid (Petrol + Electric)",
+            "fuelEfficiency": "20 km/L",
+            "seating": "7 passengers",
+            "luggage": "Configurable cargo space"
+        },
+        "description": "The Toyota Noah Hybrid combines efficiency with space. Its hybrid powertrain delivers excellent fuel economy while maintaining the versatility needed for family trips and group travel."
+    },
+    "7": {
+        "features": [
+            "Robust 4x4 system",
+            "Premium interior",
+            "Advanced safety features",
+            "Multi-terrain select",
+            "Leather seats",
+            "Premium audio",
+            "Large sunroof"
+        ],
+        "specs": {
+            "engine": "3.0L Diesel",
+            "power": "170 hp",
+            "transmission": "6-speed automatic",
+            "fuelType": "Diesel",
+            "fuelEfficiency": "10 km/L",
+            "seating": "7 passengers",
+            "luggage": "Large cargo area"
+        },
+        "description": "The Toyota Prado offers a perfect blend of luxury and capability. Ideal for both city driving and safari adventures, it provides comfort and reliability in all conditions."
+    },
+    "8": {
+        "features": [
+            "Advanced hybrid system",
+            "LED headlights",
+            "Smart key system",
+            "Safety sensing",
+            "Lane departure alert",
+            "Adaptive cruise control",
+            "Wireless charging"
+        ],
+        "specs": {
+            "engine": "1.8L Hybrid",
+            "power": "121 hp combined",
+            "transmission": "CVT automatic",
+            "fuelType": "Hybrid (Petrol + Electric)",
+            "fuelEfficiency": "25 km/L",
+            "seating": "5 passengers",
+            "luggage": "Medium trunk space"
+        },
+        "description": "The Toyota Prius Hybrid is our most fuel-efficient option. Perfect for eco-conscious travelers and city driving, it offers modern technology with minimal environmental impact."
+    },
+    "9": {
+        "features": [
+            "All-wheel drive",
+            "Roof rails",
+            "Air conditioning",
+            "Power windows",
+            "CD player",
+            "ABS brakes",
+            "Multiple airbags"
+        ],
+        "specs": {
+            "engine": "2.0L 4-cylinder",
+            "power": "148 hp",
+            "transmission": "4-speed automatic",
+            "fuelType": "Petrol",
+            "fuelEfficiency": "11 km/L",
+            "seating": "5 passengers",
+            "luggage": "Medium cargo area"
+        },
+        "description": "The 2004 Toyota RAV4 is a reliable compact SUV perfect for both city use and light off-road adventures. Its proven reliability makes it an economical choice for exploring Rwanda."
+    },
+    "10": {
+        "features": [
+            "Enhanced safety features",
+            "Improved comfort",
+            "Better sound system",
+            "Upgraded suspension",
+            "Sport mode",
+            "Hill-start assist",
+            "VSC stability control"
+        ],
+        "specs": {
+            "engine": "2.4L 4-cylinder",
+            "power": "166 hp",
+            "transmission": "4-speed automatic",
+            "fuelType": "Petrol",
+            "fuelEfficiency": "11.5 km/L",
+            "seating": "5 passengers",
+            "luggage": "Expanded cargo area"
+        },
+        "description": "The 2008 Toyota RAV4 offers improved performance and comfort over its predecessor. A great all-rounder for both urban and rural exploration."
+    },
+    "11": {
+        "features": [
+            "Modern safety systems",
+            "Touch screen display",
+            "Backup camera",
+            "Bluetooth connectivity",
+            "USB ports",
+            "Push button start",
+            "Dual-zone climate control"
+        ],
+        "specs": {
+            "engine": "2.5L 4-cylinder",
+            "power": "176 hp",
+            "transmission": "6-speed automatic",
+            "fuelType": "Petrol",
+            "fuelEfficiency": "12 km/L",
+            "seating": "5 passengers",
+            "luggage": "Large cargo area"
+        },
+        "description": "The 2014 Toyota RAV4 brings modern features and enhanced comfort. Perfect for those wanting a contemporary SUV experience with proven Toyota reliability."
+    },
+    "12": {
+        "features": [
+            "Hybrid powertrain",
+            "Toyota Safety Sense 2.0",
+            "Android Auto & Apple CarPlay",
+            "Wireless charging",
+            "Digital instrument cluster",
+            "Panoramic view monitor",
+            "Power liftgate"
+        ],
+        "specs": {
+            "engine": "2.5L Hybrid",
+            "power": "219 hp combined",
+            "transmission": "CVT automatic",
+            "fuelType": "Hybrid (Petrol + Electric)",
+            "fuelEfficiency": "22 km/L",
+            "seating": "5 passengers",
+            "luggage": "Large cargo area"
+        },
+        "description": "The 2022 Toyota RAV4 Hybrid represents the latest in SUV technology. It combines excellent fuel efficiency with modern features and robust performance."
+    },
+    "13": {
+        "features": [
+            "Compact design",
+            "Versatile interior",
+            "Air conditioning",
+            "Power windows",
+            "CD player",
+            "ABS brakes",
+            "Multiple airbags"
+        ],
+        "specs": {
+            "engine": "1.3L 4-cylinder",
+            "power": "84 hp",
+            "transmission": "4-speed automatic",
+            "fuelType": "Petrol",
+            "fuelEfficiency": "16 km/L",
+            "seating": "5 passengers",
+            "luggage": "Flexible cargo space"
+        },
+        "description": "The Toyota Yaris Verso is a practical and economical choice for city driving. Its compact size and versatile interior make it perfect for urban exploration and daily commutes."
+    }
+}

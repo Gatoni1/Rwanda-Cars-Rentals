@@ -1,0 +1,26 @@
+{
+    "short_name": "RwandaCars",
+    "name": "RwandaCars - Premium Car Rental",
+    "description": "Premium car rental service in Rwanda offering luxury vehicles, SUVs, and professional drivers.",
+    "icons": [
+        {
+            "src": "/assets/images/Logo.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/images/Logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/assets/images/Logo.png",
+            "type": "image/png",
+            "sizes": "64x64 32x32 24x24 16x16"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#00C896",
+    "background_color": "#ffffff"
+}

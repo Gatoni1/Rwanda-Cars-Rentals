@@ -1,0 +1,132 @@
+[
+    {
+        "id": 1,
+        "name": "Kia Sorento",
+        "seats": 7,
+        "priceUSD": 60,
+        "priceRWF": 87000,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "image": "/assets/images/Kia Sorento 7seats.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Toyota Coaster Bus",
+        "seats": 20,
+        "priceUSD": 250,
+        "priceRWF": 362500,
+        "transmission": "Manual",
+        "fuel": "Diesel",
+        "image": "/assets/images/Toyota coaster bus 20seats.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Toyota Hatchback",
+        "seats": 5,
+        "priceUSD": 35,
+        "priceRWF": 50750,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "image": "/assets/images/Toyota hatchback 5seats.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Toyota Hiace",
+        "seats": 12,
+        "priceUSD": 150,
+        "priceRWF": 217500,
+        "transmission": "Manual",
+        "fuel": "Diesel",
+        "image": "/assets/images/Toyota hiace 12 seats.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Toyota Land Cruiser V8",
+        "seats": 7,
+        "priceUSD": 250,
+        "priceRWF": 362500,
+        "transmission": "Automatic",
+        "fuel": "Diesel",
+        "image": "/assets/images/Toyota land cruiser V8 7seats.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Toyota Noah Hybrid",
+        "seats": 7,
+        "priceUSD": 100,
+        "priceRWF": 145000,
+        "transmission": "Automatic",
+        "fuel": "Hybrid",
+        "image": "/assets/images/Toyota noal hybrid 7seats min van.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Toyota Prado",
+        "seats": 7,
+        "priceUSD": 100,
+        "priceRWF": 145000,
+        "transmission": "Automatic",
+        "fuel": "Diesel",
+        "image": "/assets/images/Toyota Prado 7seats.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Toyota Prius Hybrid",
+        "seats": 5,
+        "priceUSD": 35,
+        "priceRWF": 50750,
+        "transmission": "Automatic",
+        "fuel": "Hybrid",
+        "image": "/assets/images/Toyota Prius hybrid 5seats.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Toyota RAV4 (2004)",
+        "seats": 5,
+        "priceUSD": 45,
+        "priceRWF": 65250,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "image": "/assets/images/Toyota RAV4 2004 5seats.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Toyota RAV4 (2008)",
+        "seats": 5,
+        "priceUSD": 50,
+        "priceRWF": 72500,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "image": "/assets/images/Toyota RAV4 2008 5seats.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Toyota RAV4 (2014)",
+        "seats": 5,
+        "priceUSD": 60,
+        "priceRWF": 87000,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "image": "/assets/images/Toyota RAV4 2014 5seats.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Toyota RAV4 Hybrid (2022)",
+        "seats": 5,
+        "priceUSD": 80,
+        "priceRWF": 116000,
+        "transmission": "Automatic",
+        "fuel": "Hybrid",
+        "image": "/assets/images/Toyota RAV4 2022 hybrid 5seats.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Toyota Yaris Verso",
+        "seats": 5,
+        "priceUSD": 30,
+        "priceRWF": 43500,
+        "transmission": "Automatic",
+        "fuel": "Petrol",
+        "image": "/assets/images/Toyota Yaris verso 5seats.jpg"
+    }
+]
