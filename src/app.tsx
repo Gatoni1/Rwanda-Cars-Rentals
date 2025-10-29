@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
-import Index from '@/pages/Index'
-import Cars from '@/pages/Cars'
-import Services from '@/pages/Services'
-import About from '@/pages/About'
-import Contact from '@/pages/Contact'
-import CarDetails from '@/pages/CarDetails'
+
+// Lazy load page components for code splitting
+const Index = lazy(() => import('@/pages/Index'))
+const Cars = lazy(() => import('@/pages/Cars'))
+const Services = lazy(() => import('@/pages/Services'))
+const About = lazy(() => import('@/pages/About'))
+const Contact = lazy(() => import('@/pages/Contact'))
+const CarDetails = lazy(() => import('@/pages/CarDetails'))
 
 export default function App() {
     return (
@@ -16,14 +18,16 @@ export default function App() {
             <Navbar />
             <SEO />
             <main className="flex-1">
-                <Routes>
-                    <Route path="/" element={<Index />} />
-                    <Route path="/cars" element={<Cars />} />
-                    <Route path="/cars/details" element={<CarDetails />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                </Routes>
+                <Suspense fallback={<div className="flex items-center justify-center h-screen">Loading...</div>}>
+                    <Routes>
+                        <Route path="/" element={<Index />} />
+                        <Route path="/cars" element={<Cars />} />
+                        <Route path="/cars/:id" element={<CarDetails />} />
+                        <Route path="/services" element={<Services />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                </Suspense>
             </main>
             <Footer />
         </div>

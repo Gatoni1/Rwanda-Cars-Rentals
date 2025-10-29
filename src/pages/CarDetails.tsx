@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import cars from '@/data/cars.json'
 import carDetails from '@/data/car-details.json'
 import { Card } from '@/components/ui'
@@ -20,8 +20,8 @@ interface CarDetailsType {
 }
 
 export default function CarDetails() {
-    const [searchParams] = useSearchParams()
-    const carId = searchParams.get('car')
+    const { id } = useParams()
+    const carId = id
     const car = cars.find(c => c.id.toString() === carId)
     const details = carId ? (carDetails as Record<string, CarDetailsType>)[carId] : null
 

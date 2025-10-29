@@ -33,7 +33,7 @@ export default function CarsGrid({ featured = false }) {
                             <div className="text-xs text-gray-400">{Number(car.priceRWF).toLocaleString()} RWF</div>
                         </div>
                         <div className="flex gap-2">
-                            <Button variant="outline" onClick={() => navigate(`/cars/details?car=${car.id}`)}>Details</Button>
+                            <Button variant="outline" onClick={() => navigate(`/cars/${car.id}`)}>Details</Button>
                             <Button onClick={() => navigate(`/contact?car=${car.id}`)} style={{ backgroundColor: 'var(--primary)', color: '#fff' }}>Book Now</Button>
                         </div>
                     </div>

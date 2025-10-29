@@ -10,6 +10,7 @@ interface FormData {
     phone: string
     pickupDate: string
     returnDate: string
+    needsDriver: boolean
     timestamp?: string
     carDetails?: {
         id: number
@@ -28,7 +29,8 @@ export default function ContactForm() {
         message: '',
         phone: '',
         pickupDate: '',
-        returnDate: ''
+        returnDate: '',
+        needsDriver: false
     })
     const [open, setOpen] = useState(false)
 
@@ -72,13 +74,14 @@ Car Details:
 - Price: $${formData.carDetails.priceUSD}/day (${formData.carDetails.priceRWF.toLocaleString()} RWF)
 - Pickup Date: ${formData.pickupDate}
 - Return Date: ${formData.returnDate}
+- Driver Requested: ${formData.needsDriver ? 'Yes' : 'No'}
 ` : ''
 
         const body = `
 Name: ${formData.name}
 Email: ${formData.email}
 Phone: ${formData.phone}
-${carDetailsSection}
+${carDetailsSection}${!isBooking && formData.needsDriver ? 'Driver Requested: Yes\n' : ''}
 Message:
 ${formData.message}
 
@@ -112,7 +115,8 @@ Sent at: ${new Date().toLocaleString()}
             message: '',
             phone: '',
             pickupDate: '',
-            returnDate: ''
+            returnDate: '',
+            needsDriver: false
         })
     }
 
@@ -179,6 +183,19 @@ Sent at: ${new Date().toLocaleString()}
                     onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setData({ ...data, message: e.target.value })}
                     rows={4}
                 />
+                
+                <div className="flex items-center">
+                    <input
+                        type="checkbox"
+                        id="needsDriver"
+                        checked={data.needsDriver}
+                        onChange={(e) => setData({ ...data, needsDriver: e.target.checked })}
+                        className="h-4 w-4 text-[var(--primary)] focus:ring-[var(--primary)]"
+                    />
+                    <label htmlFor="needsDriver" className="ml-2 block text-sm text-gray-700">
+                        I need a professional driver for this booking
+                    </label>
+                </div>
 
                 <div className="mt-2 text-sm text-gray-500">
                     * Your email client will open to send this message

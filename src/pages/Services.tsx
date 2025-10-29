@@ -145,11 +145,37 @@ export default function Services() {
             <section className="mt-8">
                 <h2 className="text-2xl font-semibold text-[var(--secondary)]">Driver Services</h2>
                 <p className="mt-3 text-gray-600">Select the driving option that suits you:</p>
-                <ul className="mt-3 list-disc list-inside space-y-2 text-gray-700">
-                    <li><strong>Self-drive:</strong> Rent and drive yourself (requires a valid driving license and a security deposit). Ideal for independent travellers.</li>
-                    <li><strong>Chauffeur-driven:</strong> Professional driver included — recommended for city transfers, business travel, or trips where you prefer to relax.</li>
-                    <li><strong>Long-distance chauffeurs:</strong> Experienced drivers for safaris and long-haul journeys — available for hourly or daily rates.</li>
-                </ul>
+                <div className="mt-6 p-6 rounded-2xl gradient-hero">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <Card>
+                            <div className="flex items-start gap-4">
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-2xl">🚗</div>
+                                <div>
+                                    <h3 className="font-semibold">Self-Drive</h3>
+                                    <p className="mt-2 text-sm text-gray-600">Rent and drive yourself with complete freedom. Requires a valid driving license and security deposit. Perfect for independent travelers who prefer flexibility.</p>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card>
+                            <div className="flex items-start gap-4">
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-2xl">👨‍✈️</div>
+                                <div>
+                                    <h3 className="font-semibold">Professional Driver</h3>
+                                    <p className="mt-2 text-sm text-gray-600">Our professional drivers are knowledgeable, courteous, and experienced. They speak English and French, and know Rwanda's roads perfectly. Available for hourly or daily rates.</p>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card>
+                            <div className="flex items-start gap-4">
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-2xl">🧭</div>
+                                <div>
+                                    <h3 className="font-semibold">Safari Guide Driver</h3>
+                                    <p className="mt-2 text-sm text-gray-600">Specialized drivers for safaris and long journeys with extensive knowledge of wildlife, geography, and local customs to enhance your adventure experience.</p>
+                                </div>
+                            </div>
+                        </Card>
+                    </div>
+                </div>
             </section>
 
             {/* Insurance coverage */}

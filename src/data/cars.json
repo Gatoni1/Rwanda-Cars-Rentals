@@ -47,7 +47,7 @@
         "priceRWF": 362500,
         "transmission": "Automatic",
         "fuel": "Diesel",
-        "image": "/assets/images/Toyota land cruiser V8 7seats.jpg"
+        "image": "/assets/images/Toyota land cruiser V8 7seats.webp"
     },
     {
         "id": 6,
@@ -97,7 +97,7 @@
         "priceRWF": 72500,
         "transmission": "Automatic",
         "fuel": "Petrol",
-        "image": "/assets/images/Toyota RAV4 2008 5seats.jpg"
+        "image": "/assets/images/Toyota RAV4 2008 5seats.png"
     },
     {
         "id": 11,
