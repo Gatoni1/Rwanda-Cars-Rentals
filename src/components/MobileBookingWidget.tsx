@@ -23,7 +23,7 @@ export default function MobileBookingWidget() {
   }
 
   return (
-    <div className="fixed bottom-4 left-0 right-0 px-4 sm:static sm:px-0">
+    <div className="md:block hidden">
       <div className="bg-white rounded-2xl p-4 soft-shadow border border-gray-100 sm:max-w-xl sm:mx-auto">
         <div className="text-sm text-gray-700 mb-2">Quick Booking</div>
         <div className="grid grid-cols-1 gap-3">

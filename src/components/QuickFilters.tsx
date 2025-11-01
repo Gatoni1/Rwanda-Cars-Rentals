@@ -42,35 +42,49 @@ export default function QuickFilters() {
   }
 
   return (
-    <div className="sticky top-20 bg-white z-10 py-2">
-      <div className="flex gap-2 overflow-x-auto no-scrollbar px-1">
-        {chips.seats.map((c) => (
-          <button
-            key={`seats-${c.value}`}
-            onClick={() => updateParam('minSeats', c.value)}
-            className={`px-3 h-9 rounded-full border text-sm whitespace-nowrap ${current.minSeats === c.value ? 'bg-[var(--primary)] text-white border-[var(--primary)]' : 'border-gray-200 text-gray-700 bg-white'}`}
+    <div className="sticky top-20 bg-white z-10 py-4">
+      <div className="grid grid-cols-3 gap-2 px-4">
+        <div>
+          <label htmlFor="seats-filter" className="block text-xs text-gray-500 mb-1">Seats</label>
+          <select
+            id="seats-filter"
+            value={current.minSeats}
+            onChange={(e) => updateParam('minSeats', e.target.value)}
+            className="w-full h-10 rounded-lg border border-gray-200 px-2 text-sm"
           >
-            {c.label}
-          </button>
-        ))}
-        {chips.transmission.map((c) => (
-          <button
-            key={`trans-${c.value}`}
-            onClick={() => updateParam('transmission', c.value)}
-            className={`px-3 h-9 rounded-full border text-sm whitespace-nowrap ${current.transmission === c.value ? 'bg-[var(--primary)] text-white border-[var(--primary)]' : 'border-gray-200 text-gray-700 bg-white'}`}
+            {chips.seats.map((c) => (
+              <option key={`seats-${c.value}`} value={c.value}>{c.label}</option>
+            ))}
+          </select>
+        </div>
+        
+        <div>
+          <label htmlFor="transmission-filter" className="block text-xs text-gray-500 mb-1">Transmission</label>
+          <select
+            id="transmission-filter"
+            value={current.transmission}
+            onChange={(e) => updateParam('transmission', e.target.value)}
+            className="w-full h-10 rounded-lg border border-gray-200 px-2 text-sm"
           >
-            {c.label}
-          </button>
-        ))}
-        {chips.fuel.map((c) => (
-          <button
-            key={`fuel-${c.value}`}
-            onClick={() => updateParam('fuel', c.value)}
-            className={`px-3 h-9 rounded-full border text-sm whitespace-nowrap ${current.fuel === c.value ? 'bg-[var(--primary)] text-white border-[var(--primary)]' : 'border-gray-200 text-gray-700 bg-white'}`}
+            {chips.transmission.map((c) => (
+              <option key={`transmission-${c.value}`} value={c.value}>{c.label}</option>
+            ))}
+          </select>
+        </div>
+        
+        <div>
+          <label htmlFor="fuel-filter" className="block text-xs text-gray-500 mb-1">Fuel Type</label>
+          <select
+            id="fuel-filter"
+            value={current.fuel}
+            onChange={(e) => updateParam('fuel', e.target.value)}
+            className="w-full h-10 rounded-lg border border-gray-200 px-2 text-sm"
           >
-            {c.label}
-          </button>
-        ))}
+            {chips.fuel.map((c) => (
+              <option key={`fuel-${c.value}`} value={c.value}>{c.label}</option>
+            ))}
+          </select>
+        </div>
       </div>
     </div>
   )

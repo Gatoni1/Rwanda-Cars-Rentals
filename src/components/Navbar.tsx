@@ -18,12 +18,11 @@ export default function Navbar() {
         setMenuOpen(false)
     }, [loc.pathname])
 
-    // Open mobile menu by default on small screens so navigation pages are visible
+    // Keep mobile menu collapsed by default on small screens
     useEffect(() => {
         try {
-            if (window.innerWidth < 768) {
-                setMenuOpen(true)
-            }
+            // Initialize as closed regardless of screen size
+            setMenuOpen(false)
         } catch (e) {
             // ignore in non-browser environments
         }
