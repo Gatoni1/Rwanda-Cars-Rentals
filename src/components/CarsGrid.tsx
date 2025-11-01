@@ -4,9 +4,25 @@ import featuredCars from '@/data/featured-cars.json'
 import { Card, Button } from './ui'
 import { useNavigate } from 'react-router-dom'
 
-export default function CarsGrid({ featured = false }) {
+type Filters = {
+    minSeats?: string
+    transmission?: string
+    fuel?: string
+}
+
+export default function CarsGrid({ featured = false, filters }: { featured?: boolean, filters?: Filters }) {
     const navigate = useNavigate()
-    const displayCars = featured ? featuredCars : cars
+    let displayCars = featured ? featuredCars : cars
+
+    // Apply filters for non-featured grid
+    if (!featured && filters) {
+        displayCars = (displayCars as any[]).filter((car) => {
+            const bySeats = filters.minSeats ? Number(car.seats) >= Number(filters.minSeats) : true
+            const byTrans = filters.transmission ? car.transmission === filters.transmission : true
+            const byFuel = filters.fuel ? car.fuel === filters.fuel : true
+            return bySeats && byTrans && byFuel
+        })
+    }
     return (
         <div className={`grid ${featured ? 'grid-cols-1 md:grid-cols-2 gap-10' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'}`}>
             {displayCars.map((car: any) => (
@@ -34,7 +50,9 @@ export default function CarsGrid({ featured = false }) {
                         </div>
                         <div className="flex gap-2">
                             <Button variant="outline" onClick={() => navigate(`/cars/${car.id}`)}>Details</Button>
-                            <Button onClick={() => navigate(`/contact?car=${car.id}`)} style={{ backgroundColor: 'var(--primary)', color: '#fff' }}>Book Now</Button>
+                            <Button onClick={() => navigate(`/contact?car=${car.id}`)} style={{ backgroundColor: 'var(--primary)', color: '#fff' }} className="md:h-10 h-12">
+                                Book Now
+                            </Button>
                         </div>
                     </div>
                 </Card>

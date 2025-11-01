@@ -5,12 +5,17 @@ import SEO from '@/components/SEO'
 import ServicesSection from '@/components/ServicesSection'
 import CarsGrid from '@/components/CarsGrid'
 import Testimonials from '@/components/Testimonials'
+import MobileBookingWidget from '@/components/MobileBookingWidget'
 
 export default function Index() {
     return (
         <div className="pt-24">
             <SEO title="Home - Rwanda Cars Rentals" description="Explore our featured vehicles, reliable chauffeur services and easy booking across Rwanda." />
             <HeroSection />
+            {/* Mobile booking widget fixed near bottom on mobile */}
+            <div className="md:hidden">
+                <MobileBookingWidget />
+            </div>
             <div className="max-w-6xl mx-auto px-6 py-16">
                 <ServicesSection />
             </div>

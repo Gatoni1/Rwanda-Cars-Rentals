@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
+import MobileBottomNav from '@/components/MobileBottomNav'
 
 // Lazy load page components for code splitting
 const Index = lazy(() => import('@/pages/Index'))
@@ -17,7 +18,7 @@ export default function App() {
         <div className="min-h-screen flex flex-col bg-white">
             <Navbar />
             <SEO />
-            <main className="flex-1">
+            <main className="flex-1 pb-20 md:pb-0">
                 <Suspense fallback={<div className="flex items-center justify-center h-screen">Loading...</div>}>
                     <Routes>
                         <Route path="/" element={<Index />} />
@@ -29,6 +30,7 @@ export default function App() {
                     </Routes>
                 </Suspense>
             </main>
+            <MobileBottomNav />
             <Footer />
         </div>
     )

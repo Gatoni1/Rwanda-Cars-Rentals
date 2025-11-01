@@ -100,6 +100,18 @@ export default function CarDetails() {
                     ))}
                 </div>
             </section>
+            {/* Mobile sticky booking CTA */}
+            <div className="md:hidden fixed bottom-16 left-0 right-0 z-30">
+                <div className="max-w-6xl mx-auto px-6">
+                    <a
+                        href={`/contact?car=${car.id}`}
+                        className="block w-full text-center bg-[var(--primary)] text-white font-semibold py-3 rounded-xl shadow-md"
+                        style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
+                    >
+                        Book This Car
+                    </a>
+                </div>
+            </div>
         </div>
     )
 }
