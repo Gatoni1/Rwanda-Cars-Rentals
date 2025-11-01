@@ -21,6 +21,8 @@ interface FormData {
 }
 
 export default function ContactForm() {
+    // Create a ref for the form element
+    const formRef = React.useRef<HTMLDivElement>(null);
     const [searchParams] = useSearchParams()
     const carId = searchParams.get('car')
     const [data, setData] = useState<FormData>({
@@ -121,7 +123,7 @@ Sent at: ${new Date().toLocaleString()}
     }
 
     return (
-        <div className="bg-white rounded-2xl p-6 soft-shadow">
+        <div id="booking-form" ref={formRef} className="bg-white rounded-2xl p-6 soft-shadow">
             <form onSubmit={submit} className="space-y-4">
                 {data.carDetails && (
                     <div className="p-4 bg-[var(--accent)] rounded-xl">
@@ -159,20 +161,26 @@ Sent at: ${new Date().toLocaleString()}
 
                 {data.carDetails && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <Input
-                            type="date"
-                            placeholder="Pickup Date"
-                            required
-                            value={data.pickupDate}
-                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setData({ ...data, pickupDate: e.target.value })}
-                        />
-                        <Input
-                            type="date"
-                            placeholder="Return Date"
-                            required
-                            value={data.returnDate}
-                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setData({ ...data, returnDate: e.target.value })}
-                        />
+                        <div>
+                            <label htmlFor="pickup-date" className="block text-sm text-gray-700 mb-1">Pickup Date</label>
+                            <Input
+                                id="pickup-date"
+                                type="date"
+                                required
+                                value={data.pickupDate}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setData({ ...data, pickupDate: e.target.value })}
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="return-date" className="block text-sm text-gray-700 mb-1">Return Date</label>
+                            <Input
+                                id="return-date"
+                                type="date"
+                                required
+                                value={data.returnDate}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setData({ ...data, returnDate: e.target.value })}
+                            />
+                        </div>
                     </div>
                 )}
 

@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React, { Suspense, lazy, useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
@@ -14,6 +14,13 @@ const Contact = lazy(() => import('@/pages/Contact'))
 const CarDetails = lazy(() => import('@/pages/CarDetails'))
 
 export default function App() {
+    const location = useLocation();
+    
+    // Scroll to top on route change
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+    
     return (
         <div className="min-h-screen flex flex-col bg-white">
             <Navbar />

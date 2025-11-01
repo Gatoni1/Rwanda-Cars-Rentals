@@ -4,6 +4,16 @@ import { Card } from '@/components/ui'
 import SEO from '@/components/SEO'
 
 export default function Contact() {
+    // Scroll to form if car parameter is present
+    React.useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('car')) {
+            const formElement = document.getElementById('booking-form');
+            if (formElement) {
+                formElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, []);
     const contactMethods = [
         {
             icon: '📞',
