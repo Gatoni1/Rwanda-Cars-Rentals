@@ -32,7 +32,7 @@ export default function CarsGrid({ featured = false, filters }: { featured?: boo
                             src={encodeURI(car.image)}
                             alt={car.name}
                             loading="lazy"
-                            className="w-full h-full object-cover rounded-2xl"
+                            className="w-full h-full object-contain md:object-cover rounded-2xl"
                             onError={(e) => {
                                 const img = e.target as HTMLImageElement
                                 // hide broken image and keep the card style intact

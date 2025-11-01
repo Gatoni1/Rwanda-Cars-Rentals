@@ -1,6 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import App from './app'
 import './index.css'
 import { initGA, initSentry } from './utils/analytics'
@@ -13,8 +14,10 @@ if (import.meta.env.MODE === 'production') {
 
 createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>
 )

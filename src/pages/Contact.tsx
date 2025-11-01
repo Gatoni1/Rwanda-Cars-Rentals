@@ -96,31 +96,67 @@ export default function Contact() {
                     <Card>
                         <h2 className="text-2xl font-heading text-[var(--secondary)]">Visit Our Office</h2>
                         <div className="mt-4">
-                            <div className="w-full h-[400px] rounded-xl overflow-hidden">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5081092160547!2d30.100781599999998!3d-1.9791159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6372dff0bd5%3A0x13126ca19be9e300!2sKicukiro%2C%20Kigali!5e0!3m2!1sen!2srw!4v1698161824148!5m2!1sen!2srw"
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 0 }}
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title="RwandaCars Office Location"
-                                ></iframe>
-                            </div>
-                            <div className="mt-4 space-y-2">
-                                <p className="text-gray-600"><strong>Address:</strong> Kigali - Kicukiro</p>
-                                <p className="text-gray-600"><strong>Landmarks:</strong> Near Kicukiro Center</p>
-                                <p className="text-sm text-[var(--primary)] hover:underline">
-                                    <a
-                                        href="https://www.google.com/maps/place/Kicukiro,+Kigali/@-1.9791159,30.1007816,17z"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Open in Google Maps →
-                                    </a>
-                                </p>
-                            </div>
+                            {(() => {
+                                const [showMap, setShowMap] = React.useState(false)
+                                const containerRef = React.useRef<HTMLDivElement | null>(null)
+
+                                React.useEffect(() => {
+                                    const el = containerRef.current
+                                    if (!el) return
+                                    const observer = new IntersectionObserver((entries) => {
+                                        entries.forEach((entry) => {
+                                            if (entry.isIntersecting) {
+                                                setShowMap(true)
+                                                observer.disconnect()
+                                            }
+                                        })
+                                    }, { rootMargin: '100px' })
+                                    observer.observe(el)
+                                    return () => observer.disconnect()
+                                }, [])
+
+                                return (
+                                    <div>
+                                        <div ref={containerRef} className="w-full h-[400px] rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center">
+                                            {showMap ? (
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5081092160547!2d30.100781599999998!3d-1.9791159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6372dff0bd5%3A0x13126ca19be9e300!2sKicukiro%2C%20Kigali!5e0!3m2!1sen!2srw!4v1698161824148!5m2!1sen!2srw"
+                                                    width="100%"
+                                                    height="100%"
+                                                    style={{ border: 0 }}
+                                                    allowFullScreen
+                                                    loading="lazy"
+                                                    referrerPolicy="no-referrer-when-downgrade"
+                                                    title="RwandaCars Office Location"
+                                                ></iframe>
+                                            ) : (
+                                                <div className="text-center p-6">
+                                                    <p className="text-gray-600">Map is lazy-loaded to reduce network requests.</p>
+                                                    <button
+                                                        className="mt-4 inline-flex items-center gap-2 rounded-xl px-4 py-2 font-medium btn-primary text-white"
+                                                        onClick={() => setShowMap(true)}
+                                                    >
+                                                        Load Map
+                                                    </button>
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className="mt-4 space-y-2">
+                                            <p className="text-gray-600"><strong>Address:</strong> Kigali - Kicukiro</p>
+                                            <p className="text-gray-600"><strong>Landmarks:</strong> Near Kicukiro Center</p>
+                                            <p className="text-sm text-[var(--primary)] hover:underline">
+                                                <a
+                                                    href="https://www.google.com/maps/place/Kicukiro,+Kigali/@-1.9791159,30.1007816,17z"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    Open in Google Maps →
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                )
+                            })()}
                         </div>
                     </Card>
 
