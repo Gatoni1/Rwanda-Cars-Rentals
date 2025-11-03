@@ -49,7 +49,7 @@ export default function Contact() {
                 <h1 className="text-3xl md:text-4xl font-heading text-[var(--secondary)]">Premium Car rental in Rwanda</h1>
                 <p className="mt-4 text-gray-600">Have questions about our services? Need a custom quote? Our team is here to help you plan your perfect journey in Rwanda.</p>
                 <div className="mt-6 flex flex-wrap gap-4 justify-center">
-                    <a href="/contact" className="inline-flex items-center gap-2 rounded-xl px-4 py-2 font-medium btn-primary text-white">Book Your Car</a>
+                    <a href="#booking-form" className="inline-flex items-center gap-2 rounded-xl px-4 py-2 font-medium btn-primary text-white">Book Your Car</a>
                     <a href="/cars" className="inline-flex items-center gap-2 rounded-xl px-4 py-2 font-medium btn-ghost">Explore Fleet</a>
                 </div>
 
@@ -85,7 +85,7 @@ export default function Contact() {
                     <Card>
                         <h2 className="text-2xl font-heading text-[var(--secondary)]">Send Us a Message</h2>
                         <p className="mt-2 text-gray-600">Fill out the form below and we'll get back to you as soon as possible.</p>
-                        <div className="mt-6">
+                        <div id="booking-form" className="mt-6">
                             <ContactForm />
                         </div>
                     </Card>
